@@ -1,0 +1,1 @@
+import{c as o,a as s,o as t}from"./index-B4XMGRGs.js";const l={class:"flex-center"},r={__name:"Accueil",setup(a){return(c,e)=>(t(),o("main",l,e[0]||(e[0]=[s("h2",null,"Voici la bibliothèque des films ENI de l'école",-1)])))}};export{r as default};

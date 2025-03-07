@@ -10,7 +10,7 @@ import axios from "axios";
  * = code qui va être executé en amont de chaque requête
  * => c'est là qu'on va inclure le token JWT recuperé depuis le localstorage
  */
-const axiosInstance = axios.create({ baseURL: 'http://localhost:8080/api/' });
+const axiosInstance = axios.create({ baseURL: 'https://filmotheque2.osc-fr1.scalingo.io/api/' });
 
 /**
  * Je précise qu'à chaque requête HTTP je veux ajouter le token JWT qui est présent dans le localstorage
