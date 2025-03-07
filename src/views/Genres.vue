@@ -52,7 +52,7 @@ async function supprimerGenre(idGenreAsupprimer) {
 // comme j'utilise await dans ma fonction, je dois préciser qu'elle est "asynchrone"
 async function recupererGenres() {
   // await : je vais avoir le retour de cette appel au bout d'un certain temps (j'attends)
-  const reponse = await axios.get("http://localhost:8080/api/genres")
+  const reponse = await axios.get("/genres")
   // une fois que j'ai recupérer la réponse, je vais pouvoir remplacer la valeur de ma variable listeGenres avec les données (.data) de celle-ci
   listeGenres.value = reponse.data
 }

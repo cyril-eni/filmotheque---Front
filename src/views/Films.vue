@@ -15,7 +15,7 @@ const recherche = ref("");
 // comme j'utilise await dans ma fonction, je dois préciser qu'elle est "asynchrone"
 async function recupererFilms() {
   // await : je vais avoir le retour de cette appel au bout d'un certain temps (j'attends)
-  const reponse = await axios.get("http://localhost:8080/api/films")
+  const reponse = await axios.get("/films")
   // une fois que j'ai recupérer la réponse, je vais pouvoir remplacer la valeur de ma variable listeFilms avec les données (.data) de celle-ci
   listeFilms.value = reponse.data
 }
@@ -23,7 +23,7 @@ async function recupererFilms() {
 // comme j'utilise await dans ma fonction, je dois préciser qu'elle est "asynchrone"
 async function rechercherFilms() {
   // await : je vais avoir le retour de cette appel au bout d'un certain temps (j'attends)
-  const reponse = await axios.get(`http://localhost:8080/api/films`, { params : {recherche : recherche.value}})
+  const reponse = await axios.get(`/films`, { params : {recherche : recherche.value}})
   // une fois que j'ai recupérer la réponse, je vais pouvoir remplacer la valeur de ma variable listeFilms avec les données (.data) de celle-ci
   listeFilms.value = reponse.data
 }

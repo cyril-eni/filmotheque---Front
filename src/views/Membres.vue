@@ -54,7 +54,7 @@ async function supprimerMembre(idMembreAsupprimer) {
 // comme j'utilise await dans ma fonction, je dois préciser qu'elle est "asynchrone"
 async function recupererMembres() {
   // await : je vais avoir le retour de cette appel au bout d'un certain temps (j'attends)
-  const reponse = await axios.get("http://localhost:8080/api/membres")
+  const reponse = await axios.get("/membres")
   // une fois que j'ai recupérer la réponse, je vais pouvoir remplacer la valeur de ma variable listeMembres avec les données (.data) de celle-ci
   listeMembres.value = reponse.data
 }
